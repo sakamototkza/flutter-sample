@@ -42,7 +42,7 @@ jobs:
           pwd
           cd my_app
           flutter test --reporter=json > test_report.log
-          
+          cat test_report.log
           echo 'Tests done.'
 
       - name: Test Report

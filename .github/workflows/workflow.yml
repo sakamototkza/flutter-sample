@@ -28,18 +28,19 @@ jobs:
         with:
           flutter-version: '3.3.1'
 
-      - name: Set up test tools
-        run: |
-          flutter pub get
-          flutter pub global activate dart_dot_reporter
-          flutter pub global activate junitreport
-          pip install junit2html
+#       - name: Set up test tools
+#         run: |
+#           flutter pub get
+#           flutter pub global activate dart_dot_reporter
+#           flutter pub global activate junitreport
+#           pip install junit2html
 
       - name: Test
         run: |
           export PATH=$PATH:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
           export PATH=$PATH:${FLUTTER_HOME}/.pub-cache/bin
-          ./test.sh
+          flutter test --machine > machine.log
+          echo 'Tests done.'
 
       - name: Arcive test results
         if: always()

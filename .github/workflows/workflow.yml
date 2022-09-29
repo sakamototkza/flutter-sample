@@ -40,6 +40,7 @@ jobs:
           export PATH=$PATH:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
           export PATH=$PATH:${FLUTTER_HOME}/.pub-cache/bin
           pwd
+          cd my_app
           flutter test --machine > machine.log
           echo 'Tests done.'
 

@@ -41,7 +41,7 @@ jobs:
           export PATH=$PATH:${FLUTTER_HOME}/.pub-cache/bin
           pwd
           cd my_app
-          flutter test --machine > machine.log
+          flutter test --machine > test_report.log
           echo 'Tests done.'
 
       - name: Test Report

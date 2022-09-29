@@ -45,7 +45,8 @@ jobs:
           echo 'Tests done.'
 
       - name: Test Report
-        uses: dorny/test-reporter@v1.5.0
+        uses: phoenix-actions/test-reporting@v8
+
         if: always()
         with:
           name: 'flutter test'

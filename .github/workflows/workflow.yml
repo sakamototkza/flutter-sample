@@ -44,12 +44,14 @@ jobs:
           flutter test --machine > machine.log
           echo 'Tests done.'
 
-      - name: Arcive test results
+      - name: Test Report
+        uses: dorny/test-reporter@v1
         if: always()
-        uses: actions/upload-artifact@v1
         with:
-          name: test-reports
-          path: test-reports
+          name: 'flutter test'
+          path: 'test_report.log'
+          reporter: 'flutter-json'
+          fail-on-error: 'false'
 
 #       - name: Slack notification
 #         if: always()

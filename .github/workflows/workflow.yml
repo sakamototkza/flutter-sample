@@ -51,7 +51,7 @@ jobs:
 
       - name: Test Report
 #       uses: phoenix-actions/test-reporting@v8
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v1.5.0
         if: always()
         with:
           name: 'flutter test'

@@ -23,10 +23,13 @@ jobs:
         with:
           java-version: '1.8'
 
-      - name: Setup flutter
-        uses: subosito/flutter-action@v2.7.1
-        with:
-          flutter-version: '3.3.1'
+#      - name: Setup flutter
+#        uses: subosito/flutter-action@v2.7.1
+#        with:
+#          flutter-version: '3.3.1'
+
+      - name: "Install Flutter"
+        run: ./.github/workflows/scripts/install-flutter.sh stable
 
 #       - name: Set up test tools
 #         run: |

@@ -39,6 +39,13 @@ jobs:
 #           flutter pub global activate junitreport
 #           pip install junit2html
 
+      - name: Analyze
+        run: |
+          cd my_app
+          flutter analyze
+          echo 'Analyze done.'
+
+
       - name: Test
         run: |
           export PATH=$PATH:${FLUTTER_HOME}/bin/cache/dart-sdk/bin

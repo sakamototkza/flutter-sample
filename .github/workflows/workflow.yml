@@ -26,7 +26,7 @@ jobs:
       - name: Setup flutter
         uses: subosito/flutter-action@v2.7.1
         with:
-          flutter-version: '3.3.1'
+          flutter-version: '2.5.3'
 
 #       - name: Set up test tools
 #         run: |
@@ -46,8 +46,8 @@ jobs:
           echo 'Tests done.'
 
       - name: Test Report
-        uses: phoenix-actions/test-reporting@v8
-
+#       uses: phoenix-actions/test-reporting@v8
+        uses: dorny/test-reporter@v1
         if: always()
         with:
           name: 'flutter test'

@@ -45,6 +45,11 @@ jobs:
           flutter analyze
           echo 'Analyze done.'
 
+      - name: format
+        run: |
+          cd my_app
+          flutter format --dry-run
+          echo 'format done.'
 
       - name: Test
         run: |

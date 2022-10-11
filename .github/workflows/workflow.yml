@@ -48,7 +48,7 @@ jobs:
       - name: format
         run: |
           cd my_app
-          flutter format --dry-run
+          flutter format ./lib --dry-run
           echo 'format done.'
 
       - name: Test

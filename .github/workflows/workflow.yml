@@ -62,7 +62,9 @@ jobs:
           echo 'Tests done.'
 
       - name: Build
-        run: flutter build ipa --build-number ${GITHUB_RUN_NUMBER}
+        run: |
+          cd my_app
+          flutter build ipa --build-number ${GITHUB_RUN_NUMBER}
 
 
 #      - name: Test Report

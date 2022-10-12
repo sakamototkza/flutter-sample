@@ -61,6 +61,10 @@ jobs:
           cat test_report.log
           echo 'Tests done.'
 
+      - name: Build
+        run: flutter build ipa --export-options-plist=ExportOptions.plist --build-number ${GITHUB_RUN_NUMBER}
+
+
 #      - name: Test Report
 #       uses: phoenix-actions/test-reporting@v8
 #        uses: dorny/test-reporter@v1.5.0
